@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix | Landing Page UI Design</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"> <img src="logo.png" alt="NETFLIX" /></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Search" />
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="wp5164052.jpg" class="lucifer" alt="Lucifer" />
+        <div class="content">
+            <img src="name.png" class="seasonTitle" alt="Lucifer" />
+            <h4>
+                <span>2021</span>
+                <span><i>16+</i> </span>
+                <span>Seasons 5</span>
+                <span>TV Shows </span>
+            </h4>
+            <p>
+                Bored with being the Lord of Hell,the devil relocates to Los Angeles, wherehe opens a nightclub and formsa connection with a homicide detective.
+            </p>
+
+            <div class="button">
+                <a href="#"><i class="fas fa-play"></i>Play</a>
+                <a href="#"><i class="fas fa-plus"></i>My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="play.png" alt="play-button">Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="lucifer Season 4 .mp4" controls="true"></video>
+        <img src="close.png" class="close" onclick="toggleVideo();" alt="close-button">
+    </div>
+
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+
+</html>
